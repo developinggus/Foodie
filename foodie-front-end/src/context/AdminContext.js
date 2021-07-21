@@ -15,7 +15,7 @@ const AdminProvider = (props) => {
     var res;
     try {
       res = await axios.get(
-        "http://192.168.1.201:3000/api/findCommentsForRestaurant",
+        "http://LOCALIP/api/findCommentsForRestaurant",
         {
           params: {
             restaurant: id,
@@ -34,7 +34,7 @@ const AdminProvider = (props) => {
   const getRestaurants = async () => {
     try {
       const res = await axios.get(
-        `http://192.168.1.201:3000/api/findRestaurant`,
+        `http://LOCALIP/api/findRestaurant`,
         {
           headers: {
             Authorization: "Bearer " + token,
@@ -51,7 +51,7 @@ const AdminProvider = (props) => {
   const deleteComment = async (id) => {
     var res;
     try {
-      res = await axios.get("http://192.168.1.201:3000/api/deleteComment", {
+      res = await axios.get("LOCALIP/api/deleteComment", {
         params: {
           id: id,
         },
