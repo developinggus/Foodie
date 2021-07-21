@@ -11,7 +11,7 @@ const RestaurantProvider = (props) => {
   const findRestaurant = async () => {
     var res;
     try {
-      res = await axios.get("http://192.168.1.201:3000/api/findRestaurant", {
+      res = await axios.get("http://LOCALIP:3000/api/findRestaurant", {
         params: {},
       });
     } catch (error) {
