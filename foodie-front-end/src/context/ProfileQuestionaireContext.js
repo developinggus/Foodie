@@ -14,7 +14,7 @@ const ProfileProvider = (props) => {
     const body = { foodTypes, price, distance, dining };
     try {
       const res = await axios.post(
-        "http://192.168.1.201:3000/api/addProfileInfo",
+        "http://LOCALIP:3000/api/addProfileInfo",
         {
           foodTypes,
           price,
