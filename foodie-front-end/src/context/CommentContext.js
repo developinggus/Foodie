@@ -17,7 +17,7 @@ const CommentProvider = (props) => {
     //const body = {poster, restaurant, content}
     try {
       const res = await axios.post(
-        "http://192.168.1.201:3000/api/addParentComment",
+        "http://LOCALIP:3000/api/addParentComment",
         {
           poster: poster,
           restaurant: restaurant,
@@ -42,7 +42,7 @@ const CommentProvider = (props) => {
   const findComments = async (user) => {
     var res;
     try {
-      res = await axios.get("http:/192.168.1.201:3000/api/findComments", {
+      res = await axios.get("http:/LOCALIP:3000/api/findComments", {
         params: {
           poster: user,
         },
@@ -57,7 +57,7 @@ const CommentProvider = (props) => {
   };
   const findChildComments = async () => {
     try {
-      res = await axios.get("http://192.168.1.201:3000/api/findChildComments", {
+      res = await axios.get("http://LOCALIP:3000/api/findChildComments", {
         params: {
           parent: parent,
         },
