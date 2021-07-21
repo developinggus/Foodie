@@ -21,7 +21,7 @@ const AuthProvider = (props) => {
 
   const signUp = async () => {
     try {
-      const res = await axios.post("http://192.168.1.201:3000/api/register", {
+      const res = await axios.post("LOCALIP/api/register", {
         email: email,
         firstName: name,
         userName: userName,
@@ -69,7 +69,7 @@ const AuthProvider = (props) => {
   const signIn = async () => {
     try {
       // Send the email and password to login
-      const res = await axios.post("http://192.168.1.201:3000/api/login", {
+      const res = await axios.post("LOCALIP/api/login", {
         email: email,
         password: password,
       });
@@ -122,7 +122,7 @@ const AuthProvider = (props) => {
 
   const getUserInfo = async (user) => {
     try {
-      res = await axios.get("http://192.168.1.201:3000/api/getUserInfo", {
+      res = await axios.get("LOCALIP/api/getUserInfo", {
         params: {
           userName: user,
         },
@@ -138,7 +138,7 @@ const AuthProvider = (props) => {
 
   const findUsers = async () => {
     try {
-      res = await axios.get("http://192.168.1.201:3000/api/findUsers", {
+      res = await axios.get("http://LOCALIP:3000/api/findUsers", {
         params: {},
       });
       if (res.data.error) {
@@ -152,7 +152,7 @@ const AuthProvider = (props) => {
 
   const addFriend = async (user, friend) => {
     try {
-      res = await axios.post("http://192.168.1.201:3000/api/addFriend", {
+      res = await axios.post("http://LOCALIP:3000/api/addFriend", {
         userName: user,
         friends: friend,
       });
